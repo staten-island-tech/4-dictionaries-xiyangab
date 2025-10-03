@@ -36,6 +36,3 @@ stock = [
     "description": "Xiyang's amazing potato chips."
 }
 ]
-
-cart = input(f"Welcome to Xiyang's Amazing Store! What would you like the purchase?")
-
