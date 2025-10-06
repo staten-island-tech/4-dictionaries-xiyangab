@@ -36,3 +36,5 @@ stock = [
     "description": "Xiyang's amazing potato chips."
 }
 ]
+
+print(f"Welcome to Xiyang's amazing store! Stock: {stock[0]["name"]}")
