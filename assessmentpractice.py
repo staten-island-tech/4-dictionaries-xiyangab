@@ -16,10 +16,9 @@ lang("TtSsS")
  """
 #assesment practice 2
 def spaces(y,t):
-    y = 0
-    t = 0
-    for char in y:
+    x = 0
+    for char in y and t:
         if char == "C":
-            y+=1
-    print(y)
-spaces("CCCCC","C.C.C.C..")
+            x = x + 1
+    print(x)
+spaces("CCCCCCCCCC","C.C.C.C.C.")
