@@ -36,10 +36,9 @@ stock = [
     "description": "Xiyang's amazing potato chips."
 }
 ]
-print("Welcome to Xiyang's amazing store!")
-names = [item["name"] for item in stock]
-print("Stock:", names)
- #i should make a list instead of buy 
+print("Welcome to Xiyang's amazing store! Stock:")
+for index, item in enumerate(stock):
+    print(index, ":", item["name"])
 cart = []
 buy = input("What would you like to buy?")
 cart.append(buy)
@@ -54,3 +53,8 @@ while cont != "No":
         print(f"Your cart: {cart}")
 if cont == "No":
     print(f"Your cart: {cart}")
+for i in range(len(cart)):
+    x = 0
+    if cart[x] == item["name"]:
+        x += 1
+        print(item["name"]["price"])
