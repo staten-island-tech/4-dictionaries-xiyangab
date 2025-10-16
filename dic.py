@@ -40,4 +40,11 @@ print("welcome to xiyangs amazing store!")
 print("stock:")
 for index, item in enumerate(stock):
     print(index, ":", item["name"])
-print("what would you like to buy?")
+cart = []
+cont = True
+while cont != False:
+    buy = input("what would you like to buy? (type 'no' to stop buying)")
+    cart.append(buy)
+    print(f"""you bought: {buy}""")
+    if buy == "no":
+        cont = False
