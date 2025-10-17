@@ -41,10 +41,28 @@ print("stock:")
 for index, item in enumerate(stock):
     print(index, ":", item["name"])
 cart = []
+total = []
 cont = True
 while cont != False:
-    buy = input("what would you like to buy? (type 'no' to stop buying)")
+    buy = input("what would you like to buy?")
     cart.append(buy)
-    print(f"""you bought: {buy}""")
-    if buy == "no":
+    print(f"you bought: {cart}")
+    a = input("do you want to continue? 'yes' or 'no'")
+    if a == 'no':
         cont = False
+
+x = 0
+y = 0
+for i in range(len(cart)):
+    #fix this; this is assuming the order matches
+    if cart[x] == stock[y]['name']:
+        print(stock[x]['price'])
+        x += 1
+    elif cart[x] != stock[y]['name']:
+        while cart[x] != stock[y]['name']:
+            y += 1
+        #make loop that checks for if cart and stock is same
+# x = 0
+# for i in range(len(cart)):
+#     print(cart[x])
+#     x += 1
