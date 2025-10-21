@@ -51,16 +51,14 @@ while cont != False:
     if a == 'no':
         cont = False
 
-x = 0
+print(cart)
+""" x = 0
 y = 0
 for i in range(len(cart)):
     #fix this; this is assuming the order matches
     if cart[x] == stock[y]['name']:
         print(stock[x]['price'])
-        x += 1
-    elif cart[x] != stock[y]['name']:
-        while cart[x] != stock[y]['name']:
-            y += 1
+        x += 1 """
         #make loop that checks for if cart and stock is same
 # x = 0
 # for i in range(len(cart)):

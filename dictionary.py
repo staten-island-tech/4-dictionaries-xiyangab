@@ -36,25 +36,22 @@ stock = [
     "description": "Xiyang's amazing potato chips."
 }
 ]
-print("Welcome to Xiyang's amazing store! Stock:")
+print("welcome to xiyangs amazing store!")
+print("stock:")
 for index, item in enumerate(stock):
     print(index, ":", item["name"])
 cart = []
-buy = input("What would you like to buy?")
-cart.append(buy)
-cont = input("Do you want to continue? Type 'Yes' or 'No'")
-while cont != "No":
-    print(f"Your cart: {cart}")
-    buy = input("What would you like to buy?")
-    cont = input("Do you want to continue? Type 'Yes' or 'No'")
-    if cont == 'Yes':
-        buy = input("What would you like to buy?")
-        cart.append(buy)
-        print(f"Your cart: {cart}")
-if cont == "No":
-    print(f"Your cart: {cart}")
-for i in range(len(cart)):
-    x = 0
-    if cart[x] == item["name"]:
-        x += 1
-        print(item["name"]["price"])
+prices = []
+cont = True
+while cont != False:
+    buy = int(input("what would you like to buy?"))
+    if buy == 0 or 1 or 2 or 3 or 4 or 5:
+        prices.append(stock[buy]['price'])
+    cart.append(buy)
+    a = input("do you want to continue? 'yes' or 'no'")
+    if a == 'no':
+            cont = False
+total = sum(prices)
+print(cart)
+print(prices)
+print(f"you total is: ${total}")
