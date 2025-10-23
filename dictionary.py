@@ -45,13 +45,11 @@ prices = []
 cont = True
 while cont != False:
     buy = int(input("what would you like to buy?"))
-    if buy == 0 or 1 or 2 or 3 or 4 or 5:
+    if buy in range(len(stock)):
         prices.append(stock[buy]['price'])
     cart.append(buy)
     a = input("do you want to continue? 'yes' or 'no'")
     if a == 'no':
             cont = False
 total = sum(prices)
-print(cart)
-print(prices)
 print(f"you total is: ${total}")
