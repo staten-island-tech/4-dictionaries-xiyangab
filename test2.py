@@ -1,6 +1,7 @@
 def broke(q,a,b,c):
     total = 0
     while q > 0:
+        print(q,a,b,c)
         q = q - 1
         total = total + 1
         a = a + 1
