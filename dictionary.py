@@ -13,25 +13,25 @@ stock = [
 },
 {
     "name": "Coca-Cola",
-    "price": 1.5,
+    "price": 2,
     "type": "Drink",
     "description": "Xiyang's amazing coca-cola."
 },
 {
     "name": "Sprite",
-    "price": 1.5,
+    "price": 2,
     "type": "Drink",
     "description": "Xiyang's amazing sprite."
 },
 {
     "name": "Takis",
-    "price": 2.5,
+    "price": 3,
     "type": "Snack",
     "description": "Xiyang's amazing takis."
 },
 {
     "name": "Potato Chips",
-    "price": 2.5,
+    "price": 3,
     "type": "Snack",
     "description": "Xiyang's amazing potato chips."
 }
@@ -42,14 +42,17 @@ for index, item in enumerate(stock):
     print(index, ":", item["name"])
 cart = []
 prices = []
+items = []
 cont = True
 while cont != False:
     buy = int(input("what would you like to buy?"))
     if buy in range(len(stock)):
         prices.append(stock[buy]['price'])
+        items.append(stock[buy]['name'])
     cart.append(buy)
     a = input("do you want to continue? 'yes' or 'no'")
     if a == 'no':
             cont = False
 total = sum(prices)
 print(f"you total is: ${total}")
+print(f"you bought: {items}")
