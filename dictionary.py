@@ -198,18 +198,18 @@ print("stock:")
 for index, item in enumerate(stock):
     print(index, ":", item["name"])
 cart = []
-prices = []
-items = []
 cont = True
 while cont != False:
     buy = int(input("what would you like to buy?"))
     if buy in range(len(stock)):
-        prices.append(stock[buy]['price'])
-        items.append(stock[buy]['name'])
-    cart.append(buy)
+        cart.append(stock[buy])
     a = input("do you want to continue? 'yes' or 'no'")
     if a == 'no':
             cont = False
-total = sum(prices)
-print(f"you total is: ${total}")
-print(f"you bought: {items}")
+total = []
+for i in cart:
+     total.append(i['price'])
+print(f"you total is: ${sum(total)}")
+print(f"you bought {len(cart)} items")
+for i in cart:
+     print(i['name'])
