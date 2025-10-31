@@ -211,5 +211,3 @@ for i in cart:
      total.append(i['price'])
 print(f"you total is: ${sum(total)}")
 print(f"you bought {len(cart)} items")
-for i in cart:
-     print(i['name'])
